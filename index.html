@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>AlgoTank - Buat algoritma terbaik untuk menggerakkan tankmu dan menangkan pertempuran!</title>
+    <meta name="description" content="Buat algoritma terbaik untuk menggerakkan tankmu dan menangkan pertempuran! Main langsung di browser." />
+    <meta name="theme-color" content="#f6f3ec" />
+    <!-- The theme before the first paint, so a dark page never flashes light: the choice stored by
+         theme/theme.ts under the same key, else the device's setting. theme.ts takes over after it. -->
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("algotank:theme");
+        } catch (error) {
+          // A blocked store (a private window): the device's setting decides, as in theme.ts.
+        }
+        if (theme !== "light" && theme !== "dark") theme = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./favicon-48.png" sizes="48x48" type="image/png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <!-- Link previews (WhatsApp, Telegram, social sites). Most of them need an absolute image address, so the
+         server writes the site's own origin in front of /og-image.png when it serves this file. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AlgoTank" />
+    <meta property="og:title" content="AlgoTank - Buat algoritma terbaik untuk menggerakkan tankmu dan menangkan pertempuran!" />
+    <meta property="og:description" content="Buat algoritma terbaik untuk menggerakkan tankmu dan menangkan pertempuran!" />
+    <meta property="og:image" content="./og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="module" crossorigin src="./assets/index-BAhv7KKt.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B4a_gI9V.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

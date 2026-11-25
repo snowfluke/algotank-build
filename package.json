@@ -1,0 +1,11 @@
+{
+  "name": "algotank-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The built AlgoTank tank workshop: static files that run in the browser without a server.",
+  "license": "MIT",
+  "algotank": {
+    "sourceCommit": "06cf389ec27bf003809e856c6dd2818300164e02",
+    "buildCommand": "bash apps/web/scripts/pack-offline.sh"
+  }
+}
